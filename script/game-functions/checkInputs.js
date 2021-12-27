@@ -44,4 +44,6 @@ export default function checkInputs() {
 
         return true
     }
+
+    return [inputsPlayer1, inputsPlayer2]
 }
