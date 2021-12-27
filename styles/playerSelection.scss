@@ -134,9 +134,14 @@
     }
 }
 
-.emoji-picker-container {
+.player-selection.hidden {
 
-    background-color: rgba(0, 0, 0, 0.404);
+    position: absolute;
+    
+    top: -100%
+}
+
+.emoji-picker-container {
 
     transition: 0.4s ease-in-out;
     opacity: 100%;
@@ -149,6 +154,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .emoji-picker-background {
+
+        position: absolute;
+
+        background-color: rgba(0, 0, 0, 0.404);
+
+        z-index: 10;
+        
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .emoji-picker-container.hidden {
@@ -159,4 +176,9 @@
     background-color: rgb(221, 121, 121);
 
     transition: 0.4s ease-in-out;
+}
+
+emoji-picker {
+
+    z-index: 100;
 }

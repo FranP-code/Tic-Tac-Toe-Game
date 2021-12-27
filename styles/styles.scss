@@ -26,3 +26,7 @@ button {
 
     cursor: pointer;
 }
+
+.animate__animated.animate__fadeOutDown {
+    --animate-duration: 1s;
+}

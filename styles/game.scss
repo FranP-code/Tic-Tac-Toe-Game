@@ -72,6 +72,16 @@
     } 
 }
 
+.game.hidden {
+
+    opacity: 0%;
+
+    position: absolute;
+
+    top: -100%;
+}
+
+
 @media (max-width: 900px) {
     
     .game {

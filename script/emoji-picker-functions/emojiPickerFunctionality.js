@@ -19,8 +19,8 @@ export default function emojiPickerFunctionality() {
         
         input.value = event.detail.unicode
 
-        const emojiPickerContainer = document.getElementsByClassName('emoji-picker-container')[0]
-        emojiPickerContainer.classList.add('hidden')
+        // const emojiPickerContainer = document.getElementsByClassName('emoji-picker-container')[0]
+        // emojiPickerContainer.classList.add('hidden')
 
     })
 
