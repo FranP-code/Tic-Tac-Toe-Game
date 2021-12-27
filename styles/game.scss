@@ -1,4 +1,4 @@
-.game {
+.game .tic-tac-toe {
 
     display: grid;
 
@@ -11,6 +11,8 @@
         height: 10vw;
 
         font-size: 75pt;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: bold;
 
         border: 2px #fff solid;
 
@@ -21,10 +23,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        user-select: none;
+        color: #e7e7e7;
     }
 }
 
-.game {
+.game .tic-tac-toe {
 
     .box {
 
@@ -85,6 +90,22 @@
     position: absolute;
 
     top: -100%;
+}
+
+.game .players-turn {
+
+    position: absolute;
+
+    top: -30%;
+    left: -20%;
+
+    span {
+
+        font-size: 30pt;
+        font-weight: bold;
+
+        color: #e7e7e7;
+    }
 }
 
 

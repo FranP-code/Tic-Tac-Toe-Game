@@ -115,48 +115,52 @@ emoji-picker {
   z-index: 100;
 }
 
-.game {
+.game .tic-tac-toe {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 }
-.game .box {
+.game .tic-tac-toe .box {
   width: 10vw;
   height: 10vw;
   font-size: 75pt;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: bold;
   border: 2px #fff solid;
   box-sizing: border-box;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
+  color: #e7e7e7;
 }
 
-.game .box#box-1 {
+.game .tic-tac-toe .box#box-1 {
   border-top: 0px;
   border-left: 0px;
 }
-.game .box#box-2 {
+.game .tic-tac-toe .box#box-2 {
   border-top: 0px;
 }
-.game .box#box-3 {
+.game .tic-tac-toe .box#box-3 {
   border-top: 0px;
   border-right: 0px;
 }
-.game .box#box-4 {
+.game .tic-tac-toe .box#box-4 {
   border-left: 0px;
 }
-.game .box#box-6 {
+.game .tic-tac-toe .box#box-6 {
   border-right: 0px;
 }
-.game .box#box-7 {
+.game .tic-tac-toe .box#box-7 {
   border-bottom: 0px;
   border-left: 0px;
 }
-.game .box#box-8 {
+.game .tic-tac-toe .box#box-8 {
   border-bottom: 0px;
 }
-.game .box#box-9 {
+.game .tic-tac-toe .box#box-9 {
   border-bottom: 0px;
   border-right: 0px;
 }
@@ -165,6 +169,17 @@ emoji-picker {
   opacity: 0%;
   position: absolute;
   top: -100%;
+}
+
+.game .players-turn {
+  position: absolute;
+  top: -30%;
+  left: -20%;
+}
+.game .players-turn span {
+  font-size: 30pt;
+  font-weight: bold;
+  color: #e7e7e7;
 }
 
 @media (max-width: 900px) {

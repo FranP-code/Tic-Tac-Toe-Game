@@ -18,6 +18,9 @@ export default function gameLogic(checkInputsResult) {
 
     let actualPlayer = players[0]
     let boxesMarked = []
+
+    let playersTurnMessage = document.getElementById("players-turn-name-place")
+        playersTurnMessage.innerText = actualPlayer.name
     
     const boxes = [...document.getElementsByClassName('box')]
 
@@ -47,6 +50,7 @@ export default function gameLogic(checkInputsResult) {
 
             } 
 
+            playersTurnMessage.innerText = actualPlayer.name
         })
     })
 }
