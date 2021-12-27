@@ -10,11 +10,17 @@
         width: 10vw;
         height: 10vw;
 
+        font-size: 75pt;
+
         border: 2px #fff solid;
 
         box-sizing: border-box;
 
         cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
