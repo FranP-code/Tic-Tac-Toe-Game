@@ -1,5 +1,6 @@
 import accessToCombinations from "./accessToCombinations.js"
 import checkVictory from "./checkVictory.js"
+import victoryActions from "./victoryActions.js"
 
 export default function gameLogic(checkInputsResult) {
 
@@ -38,7 +39,14 @@ export default function gameLogic(checkInputsResult) {
 
             actualPlayer.markedBoxes.push(box.id)
 
-            checkVictory(combinations, actualPlayer.markedBoxes)
+            const checkVictoryResult = checkVictory(combinations, actualPlayer.markedBoxes)
+            console.log(checkVictoryResult)
+            
+            if (checkVictoryResult[0] === 'WIN') {
+
+                victoryActions(checkVictoryResult[1], actualPlayer.name)
+
+            }
 
             if (players.indexOf(actualPlayer) === 0) {
 

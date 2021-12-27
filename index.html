@@ -44,6 +44,7 @@
 
         <div class="players-turn"><span>Turn of </span><span id="players-turn-name-place"></span></div>
         
+        <div class="background-winner-div"></div>
         <div class="tic-tac-toe">
             <div class="box" id="box-1" tabindex="-1"></div>
             <div class="box" id="box-2" tabindex="-1"></div>
@@ -55,6 +56,16 @@
             <div class="box" id="box-8" tabindex="-1"></div>
             <div class="box" id="box-9" tabindex="-1"></div>
         </div>
+
+        <div class="victory-message hidden animate__animated">
+            
+            <div class="text">
+                <span>Victory of </span><span id="victory-name"></span>
+            </div>
+            
+            <button id="play-again-button">Play again</button>
+        </div>
     </div>
+
 </body>
 </html>
