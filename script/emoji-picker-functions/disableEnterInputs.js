@@ -1,4 +1,4 @@
-export default function disableEnterInputs() {
+export default function disableEnterInputs(game) {
 
     const player1 = document.getElementsByClassName('player player-1')[0]
     const player2 = document.getElementsByClassName('player player-2')[0]
@@ -17,6 +17,7 @@ export default function disableEnterInputs() {
                 if (e.keyCode === 13 || e.which === 13) {
 
                     e.preventDefault()
+                    game()
                     return false
                 }
             })

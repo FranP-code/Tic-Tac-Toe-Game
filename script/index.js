@@ -14,7 +14,7 @@ function main(game) {
     addEmojiPickerBackgroundFunction()
     emojiPickerFunctionality()
 
-    disableEnterInputs()
+    disableEnterInputs(game)
 
     addStartButtonFunctionality(game)
 }
