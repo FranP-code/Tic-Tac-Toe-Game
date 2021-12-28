@@ -1,0 +1,23 @@
+footer {
+
+    $height: 7vh;
+
+    position: absolute;
+
+    height: $height;
+    width: 100%;
+
+    padding-left: 2vw;
+
+    top: calc(100% - $height);
+
+    box-sizing: border-box;
+    
+    color: #fff;
+    font-size: 13pt;
+
+    a {
+
+        color: rgb(31, 94, 189)
+    }
+}

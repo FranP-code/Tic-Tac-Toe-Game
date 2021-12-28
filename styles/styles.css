@@ -260,6 +260,20 @@ emoji-picker {
     height: 80vw;
   }
 }
+footer {
+  position: absolute;
+  height: 7vh;
+  width: 100%;
+  padding-left: 2vw;
+  top: calc(100% - 7vh);
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 13pt;
+}
+footer a {
+  color: #1f5ebd;
+}
+
 html, body {
   height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
