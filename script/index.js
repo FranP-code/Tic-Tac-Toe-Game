@@ -20,7 +20,7 @@ function main(game) {
 
     const data = localStorage.getItem('data')
 
-    if (data) {
+    if (typeof(data) === 'string') {
         
         const checkInputsResult = Object.values(JSON.parse(data))
         
