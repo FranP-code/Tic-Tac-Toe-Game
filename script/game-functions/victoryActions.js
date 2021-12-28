@@ -45,7 +45,7 @@ export default function victoryActions(combination, playerName, data) {
 
             game.classList.add('hidden')
             
-            localStorage.setItem('data', JSON.stringify(data))
+            localStorage.setItem('tic-tac-toe-data', JSON.stringify(data))
 
             location.reload();
 

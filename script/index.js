@@ -18,13 +18,13 @@ function main(game) {
 
     addStartButtonFunctionality(game)
 
-    const data = localStorage.getItem('data')
+    const data = localStorage.getItem('tic-tac-toe-data')
 
     if (typeof(data) === 'string') {
         
         const checkInputsResult = Object.values(JSON.parse(data))
         
-        localStorage.removeItem('data')
+        localStorage.removeItem('tic-tac-toe-data')
 
         game(checkInputsResult, true)
     }
