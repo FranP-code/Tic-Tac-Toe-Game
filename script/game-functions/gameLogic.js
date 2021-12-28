@@ -8,6 +8,7 @@ export default function gameLogic(checkInputsResult, replay) {
     function Player(position) {
 
         console.log(replay)
+        console.log(checkInputsResult)
 
         if (replay) {
          

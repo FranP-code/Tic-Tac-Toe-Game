@@ -32,6 +32,8 @@ function main(game) {
 
 function game(checkInputsResult, replay) {
 
+    console.log(checkInputsResult)
+
     if (!checkInputsResult) {
 
         checkInputsResult = checkInputs()
