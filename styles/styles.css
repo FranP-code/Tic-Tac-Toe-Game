@@ -265,8 +265,12 @@ footer {
   height: 7vh;
   width: 100%;
   padding-left: 2vw;
+  padding-right: 2vw;
   top: calc(100% - 7vh);
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: #fff;
   font-size: 13pt;
 }
