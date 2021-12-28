@@ -150,8 +150,8 @@ emoji-picker {
 .game .background-winner-div {
   background-color: rgba(95, 255, 62, 0.692);
   position: absolute;
-  width: 80vw;
-  height: 80vw;
+  width: 30vw;
+  height: 30vw;
   z-index: 10;
   opacity: 0%;
   transition: 1s ease-in-out;
@@ -253,6 +253,11 @@ emoji-picker {
   .game .players-turn {
     top: -10%;
     left: 0%;
+  }
+
+  .game .background-winner-div {
+    width: 80vw;
+    height: 80vw;
   }
 }
 html, body {
