@@ -17,11 +17,30 @@ function main(game) {
     disableEnterInputs(game)
 
     addStartButtonFunctionality(game)
+
+    const data = localStorage.getItem('data')
+
+    if (data) {
+        
+        const checkInputsResult = Object.values(JSON.parse(data))
+        
+        localStorage.removeItem('data')
+
+        game(checkInputsResult, true)
+    }
 }
 
-function game() {
+function game(checkInputsResult, replay) {
 
-    const checkInputsResult = checkInputs()
+    if (!checkInputsResult) {
+
+        checkInputsResult = checkInputs()
+    }
+
+    if (!replay) {
+
+        replay = false
+    }
     
     console.log(checkInputsResult)
     
@@ -33,7 +52,7 @@ function game() {
     hidePlayerSelection()
     showTicTacToe()
 
-    gameLogic(checkInputsResult)
+    gameLogic(checkInputsResult, replay)
 }
 
 window.onload = () => main(game)

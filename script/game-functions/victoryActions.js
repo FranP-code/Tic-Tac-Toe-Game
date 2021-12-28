@@ -1,4 +1,4 @@
-export default function victoryActions(combination, playerName) {
+export default function victoryActions(combination, playerName, data) {
 
     const stylesActions = (() => {
 
@@ -39,10 +39,16 @@ export default function victoryActions(combination, playerName) {
         
         game.classList.add('animate__fadeOutDown')
 
+        console.log(data)
+
         setTimeout(() => {
 
             game.classList.add('hidden')
-        
+            
+            localStorage.setItem('data', JSON.stringify(data))
+
+            location.reload();
+
         }, 1000)
     })
 }

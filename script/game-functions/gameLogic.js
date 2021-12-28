@@ -2,12 +2,23 @@ import accessToCombinations from "./accessToCombinations.js"
 import checkVictory from "./checkVictory.js"
 import victoryActions from "./victoryActions.js"
 
-export default function gameLogic(checkInputsResult) {
+export default function gameLogic(checkInputsResult, replay) {
 
     function Player(position) {
 
-        this.name = checkInputsResult[position][0].value
-        this.symbol = checkInputsResult[position][1].value
+        console.log(replay)
+
+        if (replay) {
+         
+            this.name = checkInputsResult[position].name 
+            this.symbol = checkInputsResult[position].symbol 
+        
+        } else {
+
+            this.name = checkInputsResult[position][0].value 
+            this.symbol = checkInputsResult[position][1].value 
+        } 
+
         this.markedBoxes = []
     }
 
@@ -42,10 +53,15 @@ export default function gameLogic(checkInputsResult) {
             const checkVictoryResult = checkVictory(combinations, actualPlayer.markedBoxes)
             console.log(checkVictoryResult)
             
+            const data = {
+
+                player1: player1,
+                player2: player2,
+            } 
+
             if (checkVictoryResult[0] === 'WIN') {
 
-                victoryActions(checkVictoryResult[1], actualPlayer.name)
-
+                victoryActions(checkVictoryResult[1], actualPlayer.name, data)
             }
 
             if (players.indexOf(actualPlayer) === 0) {
