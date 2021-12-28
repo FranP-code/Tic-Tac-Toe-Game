@@ -1,5 +1,6 @@
 import accessToCombinations from "./accessToCombinations.js"
 import checkVictory from "./checkVictory.js"
+import tieActions from "./tieActions.js"
 import victoryActions from "./victoryActions.js"
 
 export default function gameLogic(checkInputsResult, replay) {
@@ -50,8 +51,7 @@ export default function gameLogic(checkInputsResult, replay) {
 
             actualPlayer.markedBoxes.push(box.id)
 
-            const checkVictoryResult = checkVictory(combinations, actualPlayer.markedBoxes)
-            console.log(checkVictoryResult)
+            const checkVictoryResult = checkVictory(combinations, actualPlayer.markedBoxes, boxesMarked)
             
             const data = {
 
@@ -62,6 +62,11 @@ export default function gameLogic(checkInputsResult, replay) {
             if (checkVictoryResult[0] === 'WIN') {
 
                 victoryActions(checkVictoryResult[1], actualPlayer.name, data)
+            }
+
+            if (checkVictoryResult[0] === 'TIE') {
+
+                tieActions(data)
             }
 
             if (players.indexOf(actualPlayer) === 0) {

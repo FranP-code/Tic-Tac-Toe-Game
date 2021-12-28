@@ -1,7 +1,5 @@
-export default function checkVictory(combinations, boxes) {
+export default function checkVictory(combinations, boxes, globalBoxesMarked) {
 
-    const boxesSorted = boxes.sort()
-    
     const result = []
 
     combinations.forEach(combination => {
@@ -11,8 +9,16 @@ export default function checkVictory(combinations, boxes) {
             console.log('WIN')
             result.push('WIN')
             result.push(combination)
+            
         }
+        
     });
+        console.log(globalBoxesMarked.length)
+        
+        if (globalBoxesMarked.length === 9 && result.length === 0) {
+            
+            result.push('TIE')
+        }
     
     return result
 }
